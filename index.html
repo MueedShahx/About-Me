@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+<head>
+    <title>My First Website</title>
+
+<head>
+<body>
+    <h1 class="heading-1">C'EST LA VIE!</h1>
+
+
+    <p class="personal">The Most personal is The Most Creative</p>
+  <h1>About Me</h1> 
+  
+<p>My name is Mueed Shah and i'm a photographer,
+  I see the world in frames, find stories in ordinary moments, and believe that the right shot can say what words never could. I'm drawn to photography, videography, and films that leave you thinking long after the credits roll.
+
+For me, creativity isn't just about making things look good; it's about making people feel something. The details, the lighting, the music, the atmosphere everything tells a story.</p>
+  
+  
+<p class="my-paragraph">Below Are Some of My Favourite Shots That I Have Clicked</p>
+
+
+
+<div class="gallery">
+
+    <img src="images/20250104_141435.jpg"
+         data-audio="Audio/Far From Any Roads.mp3"
+         alt="Favourite movie">
+
+    <img src="images/20250504_160833.jpg"
+         data-audio="Audio/Masakali.mp3"
+         alt="Camera photography">
+
+    <img src="images/IMG-20260316-WA0004.jpg"
+         data-audio="Audio/stereo love.mp3"
+         alt="Landscape photography">
+
+    <img src="images/20260402_011303.jpg"
+         data-audio="Audio/Dum Maro Dum.mp3"
+         alt="Landscape photography">
+
+</div>
+
+
+<h2>MORE THAN JUST MOVIES.</h2>
+<p>I'm drawn to films that make me feel something the kind that stay with you long after the credits roll. The storytelling, the cinematography, the soundtracks, the little details you notice on the second watch. I love films that make you see the world a little differently.
+
+Some movies entertain you. Others become a part of you.
+
+And those are my kind of films.</p>
+<P class="my-paragraph">My Top 4 Films</P>
+
+<div class="films-gallery">
+
+    <img src="images/New folder/interstellar_ver5_xxlg.jpg"
+         data-audio="Audio/Films/Interstellar.mp3"
+         alt="Favourite movie">
+
+    <img src="images/New folder/whiplash_ver2_xxlg.jpg"
+         data-audio="Audio/Films/Whiplash.mp3"
+         alt="Camera photography">
+
+    <img src="images/New folder/seven_ver1_xxlg.jpg"
+         data-audio="Audio/Films/Se7en.mp3"
+         alt="Landscape photography">
+
+    <img src="images/New folder/rockstar_xlg.jpg"
+         data-audio="Audio/Films/Rockstar.mp3"
+         alt="Landscape photography">
+
+</div>
+
+
+
+<audio id="hoverAudio" preload="auto"></audio>
+
+<script>
+document.querySelectorAll(".gallery img, .films-gallery img").forEach(function(img) {
+
+    img.addEventListener("mouseenter", function() {
+        const audio = document.getElementById("hoverAudio");
+
+        audio.pause();
+        audio.src = img.getAttribute("data-audio");
+        audio.load();
+
+        audio.oncanplaythrough = function() {
+            audio.play().catch(function(error) {
+                console.log("Playback error:", error);
+            });
+            audio.oncanplaythrough = null;
+        };
+    });
+
+    img.addEventListener("mouseleave", function() {
+        const audio = document.getElementById("hoverAudio");
+        audio.pause();
+        audio.currentTime = 0;
+    });
+
+});
+</script>
+
+
+
+</body>
+</html>

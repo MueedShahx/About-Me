@@ -1,0 +1,67 @@
+
+body {
+    background-color:  #231942;
+    font-family:  helvetica;
+    text-align: center;
+}
+
+h1 {
+    color: #fdf0d5;
+    font-size: 60px;
+   padding-bottom: 0px;
+   margin-bottom: 0px ;
+   
+
+}
+.personal  {
+    font-size: 22px;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+}
+.heading-1{
+
+        font-size: 100px;
+        font-weight: 100;
+         letter-spacing: 0px;
+}
+.my-paragraph{
+    font-size: 40px;
+    font-family: 'Inter' sans serif;}
+p{
+    color: #e0b1cb;
+    font-size:  20px;
+text-align: center;
+
+            {font-family: helvetica;
+            font-size: 50px;
+            color:rgb(37, 158, 45) 
+
+}
+
+}
+
+
+img {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+display: inline;
+padding: 10px;
+margin-bottom: 50px;
+gap: 30px;
+justify-content: center;
+
+}
+ img {
+    width: 250px;
+    transition: transform 0.4s ease-in-out;
+}
+
+ img:hover {
+    transform: scale(1.1);
+}
+h2{
+    font-size: 50px;
+    font-family: helvetica;
+    color: #fdf0d5;
+}
