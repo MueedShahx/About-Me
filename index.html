@@ -34,7 +34,7 @@ For me, creativity isn't just about making things look good; it's about making p
          alt="Camera photography">
 
     <img src="images/IMG-20260316-WA0004.jpg"
-         data-audio="Audio/Stereo Love.mp3"
+         data-audio="Audio/stereo love.mp3"
          alt="Landscape photography">
 
     <img src="images/20260402_011303.jpg"
@@ -54,30 +54,60 @@ And those are my kind of films.</p>
 
 <div class="films-gallery">
 
-    <img src="images/New folder/interstellar_ver5_xxlg.jpg"
+    <img src="images/films/interstellar_ver5_xxlg.jpg"
          data-audio="Audio/Films/Interstellar.mp3"
          alt="Favourite movie">
 
-    <img src="images/New folder/whiplash_ver2_xxlg.jpg"
+    <img src="images/films/whiplash_ver2_xxlg.jpg"
          data-audio="Audio/Films/Whiplash.mp3"
          alt="Camera photography">
 
-    <img src="images/New folder/seven_ver1_xxlg.jpg"
+    <img src="images/films/seven_ver1_xxlg.jpg"
          data-audio="Audio/Films/Se7en.mp3"
          alt="Landscape photography">
 
-    <img src="images/New folder/rockstar_xlg.jpg"
+    <img src="images/films/rockstar_xlg.jpg"
          data-audio="Audio/Films/Rockstar.mp3"
          alt="Landscape photography">
+
+</div>
+<h3>RAISED BY THE RYTHM.</h3>
+<P>Hip-hop has always had a vibe of its own. From laid-back beats and clever bars to the unapologetic energy of Desi hip-hop, there's always something to discover. I love the music that makes you rewind a verse, catch a hidden meaning, or just get lost in the beat.
+
+From the world to the streets back home, good music speaks its own language.</P>
+<P class="my-paragraph">My Top 4 Albums</P>
+
+
+<div class="hiphop-gallery">
+
+    <img src="images/HipHop/GNX.jpg"
+         data-audio="Audio/HipHop/GNX.mp3"
+         alt="Hip-hop Album 1">
+
+    <img src="images/HipHop/lunch break.jpg"
+         data-audio="Audio/HipHop/Lunch Break.mp3"
+         alt="Hip-hop Album 2">
+
+    <img src="images/HipHop/Khana Badosh.jpg"
+         data-audio="Audio/HipHop/Khana Badosh.mp3"
+         alt="Hip-hop Album 3">
+
+    <img src="images/HipHop/Heroes And Villians.jpg"
+         data-audio="Audio/HipHop/Heroes and Villians.mp3"
+         alt="Hip-hop Album 4">
 
 </div>
 
 
 
+
 <audio id="hoverAudio" preload="auto"></audio>
 
+
 <script>
-document.querySelectorAll(".gallery img, .films-gallery img").forEach(function(img) {
+document.querySelectorAll(
+    ".gallery img, .films-gallery img, .hiphop-gallery img"
+).forEach(function(img) {
 
     img.addEventListener("mouseenter", function() {
         const audio = document.getElementById("hoverAudio");
@@ -90,18 +120,21 @@ document.querySelectorAll(".gallery img, .films-gallery img").forEach(function(i
             audio.play().catch(function(error) {
                 console.log("Playback error:", error);
             });
+
             audio.oncanplaythrough = null;
         };
     });
 
     img.addEventListener("mouseleave", function() {
         const audio = document.getElementById("hoverAudio");
+
         audio.pause();
         audio.currentTime = 0;
     });
 
 });
 </script>
+
 
 
 

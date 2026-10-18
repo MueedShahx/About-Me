@@ -32,12 +32,11 @@ p{
     font-size:  20px;
 text-align: center;
 
-            {font-family: helvetica;
-            font-size: 50px;
-            color:rgb(37, 158, 45) 
-
+           {
+    font-family: Helvetica;
+    font-size: 50px;
+    color: rgb(37, 158, 45);
 }
-
 }
 
 
@@ -61,6 +60,12 @@ justify-content: center;
     transform: scale(1.1);
 }
 h2{
+    font-size: 50px;
+    font-family: helvetica;
+    color: #fdf0d5;
+}
+
+h3{
     font-size: 50px;
     font-family: helvetica;
     color: #fdf0d5;
